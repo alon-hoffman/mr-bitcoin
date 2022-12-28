@@ -4,18 +4,17 @@
     border-collapse: collapse;
     width: 100%;
     th, td {
-      // text-align: left;
+      text-align: start;
       padding: 8px;
-    }
-    tr:nth-child(even) {
-      background-color: #f2f2f2;
     }
   }
   .contact-preview {
       color: #333;
       text-decoration: none;
+      border-bottom: 1px solid black;
       &:hover {
         color: #0056b3;
+        border-bottom: 1px solid #0056b3;
     }
   }
 }

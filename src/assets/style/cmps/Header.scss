@@ -8,7 +8,27 @@
 header{
     width:100%;
     ul{
-        gap: 10px
+        gap: 10px;
+        li {
+            border-right: 1px solid #333;
+            &:last-of-type {
+              border-right: none;
+            }
     }
 }
 }
+}
+
+.header-container {
+    header {
+      ul {
+        li {
+          border-right: 1px solid #333;
+          &:last-of-type {
+            border-right: none;
+          }
+        }
+      }
+    }
+  }
+  

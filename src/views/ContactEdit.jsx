@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import { contactService } from '../services/contact.service'
 
+const userImg = require('../assets/img/user.png')
+
+
 export default class ContactEdit extends Component {
 
     state = {
@@ -43,21 +46,23 @@ export default class ContactEdit extends Component {
         const { contact } = this.state
         if (!contact) return <h1>Loading</h1>
 
-        const inputFields = [{ type: 'text', name: 'name' }, { type: 'text', name: 'email' }, { type: 'number', name: 'phone' }]
-        const inputFieldsHtml = inputFields.map(input => <><h2>
-            {input.name}</h2><input value={contact[input.name]}
+        const inputFields = [{ type: 'text', name: 'name' }, { type: 'email', name: 'email' }, { type: 'number', name: 'phone' }]
+        const inputFieldsHtml = inputFields.map(input => <><h3 >
+            {input.name}</h3><input value={contact[input.name]}
                 onChange={this.handleChange} type={input.type} name={input.name} /></>)
 
         return (
-            <>
-                <h1>{contact._id ? 'Edit' : 'Add'}</h1>
+            <section className='contact-edit'>
+                <h1 >{contact._id ? 'Edit' : 'Add'}</h1>
                 <form onSubmit={this.submitContact}>
                     {inputFieldsHtml}
-                    <button>Save</button>
+                    <div>
+                        <button className='save'>Save</button>
+                        <button onClick={this.deleteContact} className='warning'>Delete</button>
+                    </div>
                 </form>
-                <button onClick={this.deleteContact} className='delBtn'>Delete contact</button>
+            </section>
 
-            </>
 
         )
     }

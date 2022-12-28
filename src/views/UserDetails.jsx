@@ -28,8 +28,8 @@ export class UserDetails extends Component {
             <>
                 <section className='user-details '>
                     <div>
-                        <h2>Hello {name}</h2>
-                        <p>Your balance {balance}</p>
+                        <h2 className='text-center'>Hello {name}</h2>
+                        <p>Your balance stands at: {balance}</p>
                         <MoveList moves={moves} />
                     </div>
                     <img src={bitCoinImg} alt="" className='secondary' />

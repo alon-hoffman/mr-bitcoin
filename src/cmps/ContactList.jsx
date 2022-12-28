@@ -7,8 +7,8 @@ export function ContactList({ contacts, openUserDetails }) {
             <table>
                 <thead>
                     <tr>
-                        <th colspan="0">Name</th>
-                        <th colspan="2">Email</th>
+                        <th >Name</th>
+                        <th >Email</th>
                         <th>Phone</th>
                     </tr>
                 </thead>
