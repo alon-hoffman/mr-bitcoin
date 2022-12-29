@@ -53,10 +53,10 @@ export default class ContactEdit extends Component {
 
         return (
             <section className='contact-edit'>
-                <h1 >{contact._id ? 'Edit' : 'Add'}</h1>
-                <form onSubmit={this.submitContact}>
+                <h1 className='text-center' >{contact._id ? 'Edit' : 'Add'}</h1>
+                <form onSubmit={this.submitContact} className='flex column'>
                     {inputFieldsHtml}
-                    <div>
+                    <div className='flex justify-between buttons'>
                         <button className='save'>Save</button>
                         <button onClick={this.deleteContact} className='warning'>Delete</button>
                     </div>
