@@ -14,7 +14,7 @@ export function Header() {
                             <li>Your profile</li>
                         </NavLink>
                         <NavLink to="/Chart">
-                            <li>Chart</li>
+                            <li>Statistics</li>
                         </NavLink>
                         <NavLink to="/">
                             <li>Contacts</li>

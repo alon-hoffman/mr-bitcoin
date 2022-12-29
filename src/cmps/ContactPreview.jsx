@@ -13,10 +13,10 @@ export function ContactPreview({ contact, openUserDetails }) {
                 <Link to={`contact/${contact._id}`}  > <p>{contact.name}</p></Link>
             </td>
             <td>
-                <p>{contact.email}</p>
+                <Link to={`contact/${contact._id}`}  ><p>{contact.email}</p></Link>
             </td>
             <td>
-                <p>{contact.phone}</p>
+                <Link to={`contact/${contact._id}`}  ><p>{contact.phone}</p></Link>
             </td>
         </tr>
     )
